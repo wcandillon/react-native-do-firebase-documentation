@@ -26,7 +26,7 @@ yarn
 * **Firebase Backend only**: Run the following command `yarn generate`
 
 * **To simulate for iOS**
-    * Method One**:
+    * Method One:
         * Run `npm start` in your terminal.
         * Scan the QR code in your Expo App.
     * Method Two:
@@ -42,7 +42,7 @@ yarn
 ## Seed Project
 
 Once you are ready to use this template for your own project, you might want to remove some screens.
-The entry point of the app is `App.js`, this file contains the all the screens of the app organized into navigation routes.
+The entry point of the app is `App.js`, this file contains all the screens of the app organized into navigation routes.
 Once you removed the unnecessary routes, you can remove the folder that correspond to the screens you would like to remove.
 For instance, if you would like to remove the Overview screen, you need to remove its references from `App.js` and remove the `src/overview` folder.
 It's that simple.
