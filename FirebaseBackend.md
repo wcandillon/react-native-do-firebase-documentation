@@ -1,11 +1,12 @@
 # Firebase Backend
 
-There is an option of the theme available with a Firebase integration.
 In this guide, we aim to guide you in setting up the app under your own firebase account and updating the backend of the app.
+If you don't have one, you can create a firebase account (here)[https://console.firebase.google.com].
 
 ## Using your own Firebase account
 
 To use your own Firebase account for this account, please create a new project and enable email/password authentication.
+To enable email/password authentication, go to `Authentication` from the left menu, then go to `Sign-in Methods` and enable the Email/password field.
 <img src="images/firebase/enable-email-notifications.png" width="300" style="margin: 16px;" />
 
 From there you can go to `settings -> Add Firebase to your web app` and copy the given code snippet in `src/Firebase.js`.
@@ -39,6 +40,12 @@ Now you can login with the firebase cli using the command below:
 
 ```bash
 firebase login
+```
+
+If you were already signed-in with different credentials, you can use the following command:
+
+```bash
+firebase login --reauth
 ```
 
 In `.firebaserc` you can replace the project id `react-native-do` with your own project id.

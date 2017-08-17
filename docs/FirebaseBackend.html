@@ -239,10 +239,11 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="firebase-backend">Firebase Backend</h1>
-<p>There is an option of the theme available with a Firebase integration.
-In this guide, we aim to guide you in setting up the app under your own firebase account and updating the backend of the app.</p>
+<p>In this guide, we aim to guide you in setting up the app under your own firebase account and updating the backend of the app.
+If you don&apos;t have one, you can create a firebase account (here)[<a href="https://console.firebase.google.com" target="_blank">https://console.firebase.google.com</a>].</p>
 <h2 id="using-your-own-firebase-account">Using your own Firebase account</h2>
 <p>To use your own Firebase account for this account, please create a new project and enable email/password authentication.
+To enable email/password authentication, go to <code>Authentication</code> from the left menu, then go to <code>Sign-in Methods</code> and enable the Email/password field.
 <img src="images/firebase/enable-email-notifications.png" width="300" style="margin: 16px;"></p>
 <p>From there you can go to <code>settings -&gt; Add Firebase to your web app</code> and copy the given code snippet in <code>src/Firebase.js</code>.
 This is how the beginning of the file looks like:</p>
@@ -267,6 +268,9 @@ To generate the <code>rules.json</code> file run the following command:</p>
 <p><code>rules.json</code> is generated from <code>rules.bolt</code>.
 Now you can login with the firebase cli using the command below:</p>
 <pre><code class="lang-bash">firebase login
+</code></pre>
+<p>If you were already signed-in with different credentials, you can use the following command:</p>
+<pre><code class="lang-bash">firebase login --reauth
 </code></pre>
 <p>In <code>.firebaserc</code> you can replace the project id <code>react-native-do</code> with your own project id.
 You are now ready to deploy the database rules using the following command:</p>
@@ -355,7 +359,7 @@ src/Model.js:8
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Firebase Backend","level":"1.5","depth":1,"next":{"title":"Packages","level":"1.6","depth":1,"path":"Packages.md","ref":"Packages.md","articles":[]},"previous":{"title":"Installation","level":"1.4","depth":1,"path":"Installation.md","ref":"Installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Native DO","gitbook":"*"},"file":{"path":"FirebaseBackend.md","mtime":"2017-08-15T10:34:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-17T12:46:56.044Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Firebase Backend","level":"1.5","depth":1,"next":{"title":"Packages","level":"1.6","depth":1,"path":"Packages.md","ref":"Packages.md","articles":[]},"previous":{"title":"Installation","level":"1.4","depth":1,"path":"Installation.md","ref":"Installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Native DO","gitbook":"*"},"file":{"path":"FirebaseBackend.md","mtime":"2017-08-17T12:54:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-17T12:56:16.387Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
