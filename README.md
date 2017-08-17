@@ -1,4 +1,4 @@
-# React Native DO
+# React Native DO with Firebase
 
 <img src="images/react-native-do.gif" width="300" style="margin: 16px;" />
 
