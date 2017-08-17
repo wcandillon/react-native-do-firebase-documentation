@@ -61,5 +61,5 @@ Last but not least, expo enables you to update your app instantaneously without 
 ## MobX
 
 We use [MobX](https://github.com/mobxjs/mobx) for the state management in this project.
-Please checkout the documentation of this project and you can also look [this example](https://docs.nativebase.io/docs/MobxCounterExample.html) from NativeBase.
+Please checkout the documentation of this project and you can also look [this example](https://docs.nativebase.io/docs/examples/MobxCounterExample.html) from NativeBase.
 
