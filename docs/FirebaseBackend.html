@@ -1,0 +1,394 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Firebase Backend · React Native DO</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Packages.html" />
+    
+    
+    <link rel="prev" href="Installation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Screens.html">
+            
+                <a href="Screens.html">
+            
+                    
+                    Screens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Technologies.html">
+            
+                <a href="Technologies.html">
+            
+                    
+                    Technologies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Installation.html">
+            
+                <a href="Installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="FirebaseBackend.html">
+            
+                <a href="FirebaseBackend.html">
+            
+                    
+                    Firebase Backend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Packages.html">
+            
+                <a href="Packages.html">
+            
+                    
+                    Packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Changelog.html">
+            
+                <a href="Changelog.html">
+            
+                    
+                    Changelog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="License.html">
+            
+                <a href="License.html">
+            
+                    
+                    License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Firebase Backend</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="firebase-backend">Firebase Backend</h1>
+<p>There is an option of the theme available with a Firebase integration.
+In this guide, we aim to guide you in setting up the app under your own firebase account and updating the backend of the app.</p>
+<h2 id="using-your-own-firebase-account">Using your own Firebase account</h2>
+<p>To use your own Firebase account for this account, please create a new project and enable email/password authentication.
+<img src="images/firebase/enable-email-notifications.png" width="300" style="margin: 16px;"></p>
+<p>From there you can go to <code>settings -&gt; Add Firebase to your web app</code> and copy the given code snippet in <code>src/Firebase.js</code>.
+This is how the beginning of the file looks like:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> firebase <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;firebase&quot;</span>;
+
+<span class="hljs-keyword">import</span> {User} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../Model&quot;</span>;
+<span class="hljs-keyword">import</span> {DEFAULT_USER} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../Constants&quot;</span>;
+
+<span class="hljs-keyword">const</span> config = {
+    apiKey: <span class="hljs-string">&quot;...&quot;</span>,
+    authDomain: <span class="hljs-string">&quot;...&quot;</span>,
+    databaseURL: <span class="hljs-string">&quot;...&quot;</span>,
+    projectId: <span class="hljs-string">&quot;...&quot;</span>,
+    storageBucket: <span class="hljs-string">&quot;&quot;</span>,
+    messagingSenderId: <span class="hljs-string">&quot;...&quot;</span>
+};
+</code></pre>
+<p>Last step, you need to deploy the database validation and security rules to your account.
+To generate the <code>rules.json</code> file run the following command:</p>
+<pre><code class="lang-bash">yarn generate
+</code></pre>
+<p><code>rules.json</code> is generated from <code>rules.bolt</code>.
+Now you can login with the firebase cli using the command below:</p>
+<pre><code class="lang-bash">firebase login
+</code></pre>
+<p>In <code>.firebaserc</code> you can replace the project id <code>react-native-do</code> with your own project id.
+You are now ready to deploy the database rules using the following command:</p>
+<pre><code class="lang-bash">yarn deploy
+</code></pre>
+<p>Et voil&#xE0;! You are up and running with your own Firebase backend.</p>
+<h2 id="updating-the-backend">Updating the backend</h2>
+<p>Of course, the data model of your app is likely to be quite different from the one we provided you with.
+We use a single source of truth for the data model of the app which is contained in <code>rules.bolt</code>.
+This file is written using the <a href="https://github.com/firebase/bolt/blob/master/docs/language.md" target="_blank">Firebase Bolt Security and Modeling Language</a>.
+We use this file to generate the database security and validations rules (<code>rules.json</code>) but also the flow types for the React Native app (<code>src/Model.js</code>).</p>
+<p>When modifying <code>rules.bolt</code>, you can re-generate the necessary artifacts using the following command:</p>
+<pre><code class="lang-bash">yarn generate
+</code></pre>
+<p>And to deploy the new database rules:</p>
+<pre><code class="lang-bash">yarn deploy
+</code></pre>
+<h3 id="example">Example</h3>
+<p>Assume you want to had a new property in the type <code>Profile</code> named <code>pictureURL</code>.
+You can update the type definition the following way:</p>
+<pre><code class="lang-bolt">type Profile {
+    name: String,
+    birthday: Number,
+    pictureURL: String,
+    emailNotifications: Boolean,
+    phoneNotifications: Boolean
+}
+</code></pre>
+<p>To re-generate the artifacts:</p>
+<pre><code class="lang-bash">yarn generate
+</code></pre>
+<p>Now the code of the app needs to be refactored accordingly.
+Flow type checker will point out these places for you.
+Run: </p>
+<pre><code class="lang-bash">yarn flow
+=&gt;
+src/Model.js:8
+  8:   profile: Profile,
+                ^^^^^^^ property `pictureURL` of Profile. Property not found <span class="hljs-keyword">in</span>
+  5:     profile : {
+                   ^ object literal. See: src/Constants.js:5
+</code></pre>
+<p>Once the code refactoring is done, you can deploy the new database rules:</p>
+<pre><code class="lang-bash">yarn deploy
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Packages.html" class="navigation navigation-next " aria-label="Next page: Packages">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Firebase Backend","level":"1.5","depth":1,"next":{"title":"Packages","level":"1.6","depth":1,"path":"Packages.md","ref":"Packages.md","articles":[]},"previous":{"title":"Installation","level":"1.4","depth":1,"path":"Installation.md","ref":"Installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Native DO","gitbook":"*"},"file":{"path":"FirebaseBackend.md","mtime":"2017-08-15T10:34:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-17T07:21:58.131Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

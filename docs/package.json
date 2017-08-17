@@ -1,0 +1,25 @@
+{
+  "name": "react-native-do-firebase-documentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gitbook": "gitbook",
+    "build": "gitbook build . docs",
+    "start": "gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcandillon/react-native-do-firebase-documentation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wcandillon/react-native-do-firebase-documentation/issues"
+  },
+  "homepage": "https://github.com/wcandillon/react-native-do-firebase-documentation#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.0"
+  }
+}
