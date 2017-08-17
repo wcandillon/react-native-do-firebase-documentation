@@ -2,6 +2,8 @@
 * NodeJS >= 6
 * NPM or Yarn
 
+This version has been tested with Node `v8.1.2` and NPM `4.6.1` as well as NPM `5.3.0`.
+
 # Installation
 
 * **Opt #1. Download ZIP**
