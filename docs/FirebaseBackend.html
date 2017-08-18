@@ -240,11 +240,11 @@
                                 
                                 <h1 id="firebase-backend">Firebase Backend</h1>
 <p>In this guide, we aim to guide you in setting up the app under your own firebase account and updating the backend of the app.
-If you don&apos;t have one, you can create a firebase account (here)[<a href="https://console.firebase.google.com" target="_blank">https://console.firebase.google.com</a>].</p>
+If you don&apos;t have one, you can create a firebase account <a href="https://console.firebase.google.com" target="_blank">here</a>.</p>
 <h2 id="using-your-own-firebase-account">Using your own Firebase account</h2>
 <p>To use your own Firebase account for this account, please create a new project and enable email/password authentication.
 To enable email/password authentication, go to <code>Authentication</code> from the left menu, then go to <code>Sign-in Methods</code> and enable the Email/password field.
-<img src="images/firebase/enable-email-notifications.png" width="300" style="margin: 16px;"></p>
+<img src="images/firebase/enable-email-notifications.png" width="300"></p>
 <p>From there you can go to <code>settings -&gt; Add Firebase to your web app</code> and copy the given code snippet in <code>src/Firebase.js</code>.
 This is how the beginning of the file looks like:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> firebase <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;firebase&quot;</span>;
@@ -277,6 +277,9 @@ You are now ready to deploy the database rules using the following command:</p>
 <pre><code class="lang-bash">yarn deploy
 </code></pre>
 <p>Et voil&#xE0;! You are up and running with your own Firebase backend.</p>
+<h2 id="checking-the-data">Checking the data</h2>
+<p>Once your application is up and running, you can check the list of created users by going into <code>Authentication -&gt; Users</code>.</p>
+<p><img src="images/firebase/users.png"></p>
 <h2 id="updating-the-backend">Updating the backend</h2>
 <p>Of course, the data model of your app is likely to be quite different from the one we provided you with.
 We use a single source of truth for the data model of the app which is contained in <code>rules.bolt</code>.
@@ -359,7 +362,7 @@ src/Model.js:8
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Firebase Backend","level":"1.5","depth":1,"next":{"title":"Packages","level":"1.6","depth":1,"path":"Packages.md","ref":"Packages.md","articles":[]},"previous":{"title":"Installation","level":"1.4","depth":1,"path":"Installation.md","ref":"Installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Native DO","gitbook":"*"},"file":{"path":"FirebaseBackend.md","mtime":"2017-08-17T12:54:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-17T12:56:16.387Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Firebase Backend","level":"1.5","depth":1,"next":{"title":"Packages","level":"1.6","depth":1,"path":"Packages.md","ref":"Packages.md","articles":[]},"previous":{"title":"Installation","level":"1.4","depth":1,"path":"Installation.md","ref":"Installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Native DO","gitbook":"*"},"file":{"path":"FirebaseBackend.md","mtime":"2017-08-18T07:14:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-18T07:14:48.034Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

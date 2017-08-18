@@ -1,13 +1,13 @@
 # Firebase Backend
 
 In this guide, we aim to guide you in setting up the app under your own firebase account and updating the backend of the app.
-If you don't have one, you can create a firebase account (here)[https://console.firebase.google.com].
+If you don't have one, you can create a firebase account [here](https://console.firebase.google.com).
 
 ## Using your own Firebase account
 
 To use your own Firebase account for this account, please create a new project and enable email/password authentication.
 To enable email/password authentication, go to `Authentication` from the left menu, then go to `Sign-in Methods` and enable the Email/password field.
-<img src="images/firebase/enable-email-notifications.png" width="300" style="margin: 16px;" />
+<img src="images/firebase/enable-email-notifications.png" width="300" />
 
 From there you can go to `settings -> Add Firebase to your web app` and copy the given code snippet in `src/Firebase.js`.
 This is how the beginning of the file looks like:
@@ -56,6 +56,13 @@ yarn deploy
 ```
 
 Et voilà! You are up and running with your own Firebase backend.
+
+## Checking the data
+
+Once your application is up and running, you can check the list of created users by going into ` Authentication -> Users`.
+
+<img src="images/firebase/users.png" />
+
 
 ## Updating the backend
 
