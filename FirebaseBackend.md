@@ -9,7 +9,7 @@ To use your own Firebase account for this account, please create a new project a
 To enable email/password authentication, go to `Authentication` from the left menu, then go to `Sign-in Methods` and enable the Email/password field.
 <img src="images/firebase/enable-email-notifications.png" width="300" />
 
-From there you can go to `settings -> Add Firebase to your web app` and copy the given code snippet in `src/Firebase.js`.
+From there you can go to `settings -> Add Firebase to your web app` and copy the given code snippet in `src/components/Firebase.js`.
 This is how the beginning of the file looks like:
 
 ```js
@@ -26,6 +26,7 @@ const config = {
     storageBucket: "",
     messagingSenderId: "..."
 };
+…
 ```
 
 Last step, you need to deploy the database validation and security rules to your account.

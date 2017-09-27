@@ -245,7 +245,7 @@ If you don&apos;t have one, you can create a firebase account <a href="https://c
 <p>To use your own Firebase account for this account, please create a new project and enable email/password authentication.
 To enable email/password authentication, go to <code>Authentication</code> from the left menu, then go to <code>Sign-in Methods</code> and enable the Email/password field.
 <img src="images/firebase/enable-email-notifications.png" width="300"></p>
-<p>From there you can go to <code>settings -&gt; Add Firebase to your web app</code> and copy the given code snippet in <code>src/Firebase.js</code>.
+<p>From there you can go to <code>settings -&gt; Add Firebase to your web app</code> and copy the given code snippet in <code>src/components/Firebase.js</code>.
 This is how the beginning of the file looks like:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> firebase <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;firebase&quot;</span>;
 
@@ -260,6 +260,7 @@ This is how the beginning of the file looks like:</p>
     storageBucket: <span class="hljs-string">&quot;&quot;</span>,
     messagingSenderId: <span class="hljs-string">&quot;...&quot;</span>
 };
+&#x2026;
 </code></pre>
 <p>Last step, you need to deploy the database validation and security rules to your account.
 To generate the <code>rules.json</code> file run the following command:</p>
@@ -362,7 +363,7 @@ src/Model.js:8
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Firebase Backend","level":"1.5","depth":1,"next":{"title":"Packages","level":"1.6","depth":1,"path":"Packages.md","ref":"Packages.md","articles":[]},"previous":{"title":"Installation","level":"1.4","depth":1,"path":"Installation.md","ref":"Installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Native DO","gitbook":"*"},"file":{"path":"FirebaseBackend.md","mtime":"2017-08-18T07:14:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-23T07:59:53.772Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Firebase Backend","level":"1.5","depth":1,"next":{"title":"Packages","level":"1.6","depth":1,"path":"Packages.md","ref":"Packages.md","articles":[]},"previous":{"title":"Installation","level":"1.4","depth":1,"path":"Installation.md","ref":"Installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"React Native DO","gitbook":"*"},"file":{"path":"FirebaseBackend.md","mtime":"2017-09-27T12:12:33.968Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-27T12:12:46.928Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
