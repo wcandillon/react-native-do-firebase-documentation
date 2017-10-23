@@ -20,8 +20,6 @@ To setup the Full Version for the App on your system, with gitstrap tools to syn
 
 ```bash
 cd App
-npm install
-or
 yarn
 ```
 
