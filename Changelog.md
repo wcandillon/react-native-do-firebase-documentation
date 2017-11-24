@@ -3,6 +3,7 @@
 ## 1.2.0
 * Refactoring to the latest NativeBase version. No more references to `StyleSheet.flatten()`.
 * Upgrade to latest version of `flow`.
+* Update `React`, `React Native`, and `Expo` packages.
 * Upgrade `react-navigation` version.
 * Fixed splash screen and improved logo.
 * Minor improvements in component folder structure.

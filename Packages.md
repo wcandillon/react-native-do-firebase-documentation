@@ -1,9 +1,9 @@
 # Packages Used
- 
+
 ```json
 {
     "name": "react-native-do-backend",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "private": true,
     "devDependencies": {
         "autobind-decorator": "1.4.0",
@@ -16,8 +16,9 @@
         "firebase-bolt": "0.8.2",
         "firebase-bolt-transpiler": "git+https://github.com/wcandillon/firebase-bolt-transpiler#e4172ab14a43a3dd6f29711582a9780d91e93238",
         "firebase-tools": "3.9.2",
-        "flow-bin": "^0.49.1",
-        "jest-expo": "~20.0.0",
+        "flow-bin": "0.58.0",
+        "flow-result-checker": "^1.0.0",
+        "jest-expo": "23.0.0",
         "react-native-scripts": "1.5.0",
         "react-test-renderer": "16.0.0-alpha.12"
     },
@@ -31,21 +32,21 @@
         "ios": "react-native-scripts ios",
         "test": "node node_modules/jest/bin/jest.js",
         "test:watch": "node node_modules/jest/bin/jest.js --watch",
-        "flow": "flow",
+        "flow": "flow check --show-all-errors | flow-result-checker",
         "lint": "eslint App.js App.test.js src/",
         "install": "firebase-bolt < rules.bolt > rules.json && firebase-bolt-transpiler --flow < rules.bolt > src/Model.js"
     },
     "jest": {
         "preset": "jest-expo",
         "transformIgnorePatterns": [
-            "node_modules/(?!react-native|react-navigation|expo|native-base-shoutem-theme|@shoutem|react-clone-referenced-element)"
+            "node_modules/(?!react-native|react-navigation|expo|native-base-shoutem-theme|@shoutem|react-clone-referenced-element|native-base|@expo|mobx-react)"
         ],
         "testResultsProcessor": "./node_modules/jest-junit-reporter"
     },
     "dependencies": {
-        "@expo/vector-icons": "5.2.0",
+        "@expo/vector-icons": "6.2.0",
         "colors": "1.0.3",
-        "expo": "21.0.0",
+        "expo": "23.0.0",
         "firebase": "4.2.0",
         "jest-junit-reporter": "1.1.0",
         "lodash": "4.17.4",
@@ -53,11 +54,11 @@
         "mobx-react": "4.1.8",
         "moment": "2.18.1",
         "native-base": "2.3.1",
-        "react": "16.0.0-alpha.12",
-        "react-native": "0.48.4",
+        "react": "16.0.0",
+        "react-native": "0.50.0",
         "react-native-card-carousel": "git+https://github.com/wcandillon/react-native-card-carousel#6dc8048",
         "react-native-datepicker": "1.6.0",
-        "react-navigation": "1.0.0-beta.11",
+        "react-navigation": "1.0.0-beta.19",
         "throttle-debounce": "1.0.1"
     }
 }
