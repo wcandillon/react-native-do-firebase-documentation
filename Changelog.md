@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.2
+* Upgrade to Expo 26, NativeBase 2.4.1, and React Navigation 1.5.8.
+
 ## 1.2.0
 * Refactoring to the latest NativeBase version. No more references to `StyleSheet.flatten()`.
 * Upgrade to latest version of `flow`.
