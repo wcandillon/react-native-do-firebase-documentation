@@ -3,7 +3,7 @@
 ```json
 {
     "name": "react-native-do-firebase",
-    "version": "1.2.2",
+    "version": "1.2.4",
     "private": true,
     "devDependencies": {
         "babel-eslint": "^8.2.1",
@@ -14,13 +14,14 @@
         "eslint-plugin-jsx-a11y": "^6.0.2",
         "eslint-plugin-react": "^7.4.0",
         "eslint-plugin-react-native": "^3.2.1",
-        "exp": "49.2.2",
+        "exp": "55.0.5",
+        "expo-cli": "^1.1.0-beta.4",
         "firebase-bolt": "0.8.2",
         "firebase-bolt-transpiler": "git+https://github.com/wcandillon/firebase-bolt-transpiler#e4172ab14a43a3dd6f29711582a9780d91e93238",
         "firebase-tools": "3.9.2",
         "flow-bin": "0.63.1",
         "flow-result-checker": "^0.3.0",
-        "jest-expo": "^26.0.0",
+        "jest-expo": "^29.0.0",
         "react-native-scripts": "1.11.1",
         "react-test-renderer": "16.0.0-alpha.12"
     },
@@ -28,7 +29,7 @@
     "scripts": {
         "generate": "firebase-bolt < rules.bolt > rules.json && firebase-bolt-transpiler --flow < rules.bolt > src/Model.js",
         "deploy": "firebase deploy",
-        "start": "react-native-scripts start",
+        "start": "expo-cli start",
         "eject": "react-native-scripts eject",
         "android": "react-native-scripts android",
         "ios": "react-native-scripts ios",
@@ -49,7 +50,7 @@
         "@expo/vector-icons": "6.3.1",
         "autobind-decorator": "1.4.0",
         "colors": "1.0.3",
-        "expo": "^26.0.0",
+        "expo": "^29.0.0",
         "firebase": "4.12.1",
         "jest-junit-reporter": "1.1.0",
         "lodash": "4.17.4",
@@ -57,11 +58,11 @@
         "mobx-react": "4.1.8",
         "moment": "2.18.1",
         "native-base": "2.4.1",
-        "react": "16.3.0-alpha.1",
-        "react-native": "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz",
+        "react": "16.3.1",
+        "react-native": "https://github.com/expo/react-native/archive/sdk-29.0.0.tar.gz",
         "react-native-card-carousel": "git+https://github.com/wcandillon/react-native-card-carousel#6dc8048",
         "react-native-datepicker": "1.6.0",
-        "react-navigation": "1.5.8",
+        "react-navigation": "^2.9.3",
         "throttle-debounce": "1.0.1"
     }
 }

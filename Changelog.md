@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.4
+* Upgrade to Expo 29.
+
+## 1.2.3
+* Upgrade to Expo 27.
+
 ## 1.2.2
 * Upgrade to Expo 26, NativeBase 2.4.1, and React Navigation 1.5.8.
 
